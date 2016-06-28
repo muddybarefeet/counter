@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     var count = 0
 //    explicitly unwrap(can be nil and still compile)
-    var label: UILabel!
+    @IBOutlet var label: UILabel!
     var resetButton: UIButton!
 
     override func viewDidLoad() {
@@ -20,12 +20,12 @@ class ViewController: UIViewController {
         
 //        label
         label = UILabel()
-        label.frame = CGRectMake(190, 150, 60, 60)
+        label.frame = CGRectMake(200, 150, 60, 60)
         label.text = "0"
         self.view.addSubview(label)
 //        increment button
         let button = UIButton()
-        button.frame = CGRectMake(20, 250, 400, 60)
+        button.frame = CGRectMake(10, 250, 400, 60)
         button.setTitle("Add one to the count", forState: .Normal)
         button.setTitleColor(UIColor.blackColor(), forState: .Normal)
         self.view.addSubview(button)
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
 //        decrement button
         let decButton = UIButton()
-        decButton.frame = CGRectMake(20, 300, 400, 60)
+        decButton.frame = CGRectMake(10, 300, 400, 60)
         decButton.setTitle("Take one from the count", forState: .Normal)
         decButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         self.view.addSubview(decButton)
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
 //      background color button
         let colorButton = UIButton()
-        colorButton.frame = CGRectMake(120, 350, 150, 60)
+        colorButton.frame = CGRectMake(125, 350, 150, 60)
         colorButton.setTitle("Add color!", forState: .Normal)
         colorButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         self.view.addSubview(colorButton)
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         
 //        Reset the background color
         resetButton = UIButton()
-        resetButton.frame = CGRectMake(90, 400, 250, 60)
+        resetButton.frame = CGRectMake(80, 400, 250, 60)
         resetButton.setTitle("Remove Color", forState: .Normal)
         resetButton.setTitleColor(UIColor.blackColor(), forState: .Normal)
         self.view.addSubview(resetButton)
